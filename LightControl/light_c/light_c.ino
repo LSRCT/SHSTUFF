@@ -70,7 +70,7 @@ void reconnect() {
             delay(5000);
         }
     }
-    client.subscribe("/home/data");
+    client.subscribe("lightswitch_1");
     Serial.println("MQTT Connected...");
 }
  
