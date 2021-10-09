@@ -66,7 +66,6 @@ void loop() {
     if (!client.connected()) {
         reconnect();
     }
-    delay(1000);
     //client.loop();
     float temperature = dht.getTemperature();
     float humidity = dht.getHumidity();
@@ -76,4 +75,5 @@ void loop() {
     snprintf(BrokerMsg, 8, "%.2f", humidity);
     client.publish("AN/humid", BrokerMsg);
     Serial.println("test");
+    delay(60000);
 }
